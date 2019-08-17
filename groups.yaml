@@ -1,0 +1,34 @@
+kitchen:
+  name: Kök
+  entities:
+    - light.koksbord
+    - switch.vitrinskap
+
+hall:
+  name: Hallen
+  entities:
+    - switch.hallampa
+
+livingroom:
+  name: Vardagsrum
+  entities:
+    - light.taklampa_3
+    - switch.golvlampa
+
+bedroom:
+  name: Sovrum
+  entities:
+    - light.taklampa_sovrum
+    - switch.byralampan_sovrum
+
+arvids:
+  name: Arvids
+  entities:
+    - switch.fonster_barnrum
+    - switch.byralampa_barn
+
+all_hk_sensors:
+  name: Familjen
+  entities:
+    - input_boolean.eva_present
+    - input_boolean.jonas_present

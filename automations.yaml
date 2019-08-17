@@ -1,0 +1,7 @@
+- alias: 'Away'
+  trigger:
+    platform: state
+    entity_id: group.all_hk_sensors
+    to: 'off'
+  action:
+    - service: script.leaving

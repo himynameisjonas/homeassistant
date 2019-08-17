@@ -1,0 +1,14 @@
+- platform: template
+  sensors:
+    hk_presence_jonas:
+      friendly_name: "Jonas"
+      device_class: presence
+      value_template: >-
+        {{ is_state('input_boolean.jonas_present', 'on') }}
+- platform: template
+  sensors:
+    hk_presence_eva:
+      friendly_name: "Eva"
+      device_class: presence
+      value_template: >-
+        {{ is_state('input_boolean.eva_present', 'on') }}
