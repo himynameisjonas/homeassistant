@@ -74,6 +74,8 @@ tts:
 # Cloud
 cloud:
 
+ios:
+
 google_assistant:
   project_id: !secret google_assistant_project_id
   api_key: google_assistant_api_key
