@@ -26,6 +26,7 @@ arvids:
   entities:
     - switch.fonster_barnrum
     - switch.byralampa_barn
+    - light.ny_barnrum
 
 all_hk_sensors:
   name: Familjen
