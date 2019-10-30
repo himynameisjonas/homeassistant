@@ -3,6 +3,8 @@ kitchen:
   entities:
     - light.koksbord
     - switch.vitrinskap
+    - light.kok_fonster_vanster
+    - light.kok_fonster_hoger
 
 hall:
   name: Hallen
