@@ -4,7 +4,7 @@
       entryPoints = ["websecure"]
       service = "hassio"
       rule = "Host(`home.brusman.se`)"
-      [tcp.routers.hassio.tls]
+      [http.routers.hassio.tls]
         certResolver = "mytlschallenge"
 
   [http.services]
