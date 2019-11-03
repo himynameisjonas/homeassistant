@@ -3,7 +3,9 @@
     [http.routers.router0]
       entryPoints = ["websecure"]
       service = "hassio"
-      rule = "Host(`home.brusman.se`) "
+      rule = "Host(`home.brusman.se`)"
+      [tcp.routers.router0.tls]
+        certResolver = "mytlschallenge"
 
   [http.services]
     [http.services.hassio]
