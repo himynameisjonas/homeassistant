@@ -58,11 +58,7 @@ logger:
 
 #recorder config
 recorder:
-  purge_keep_days: 1
-  purge_interval: 1
-  include:
-    domains:
-      - sensor
+  db_url: !secret mariadb
 
 # Enables a map showing the location of tracked devices
 map:
