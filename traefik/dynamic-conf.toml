@@ -9,4 +9,4 @@
     [http.services.hassio]
       [http.services.hassio.loadBalancer]
         [[http.services.hassio.loadBalancer.servers]]
-          url = "http://172.30.32.2:8123/"
+          url = "http://127.0.0.1:8123/"
