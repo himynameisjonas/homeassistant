@@ -8,19 +8,19 @@ services:
     command:
       #- "--log.level=DEBUG"
       - "--api.insecure=true"
-      - "--providers.file.filename=/traefik/dynamic-conf.toml"
+      - "--providers.file.filename=/traefik_conf/dynamic-conf.toml"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
       #- "--certificatesresolvers.mytlschallenge.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.mytlschallenge.acme.email=jonas@brusman.se"
-      - "--certificatesresolvers.mytlschallenge.acme.storage=/traefik/letsencrypt/acme.json"
+      - "--certificatesresolvers.mytlschallenge.acme.storage=/traefik_conf/letsencrypt/acme.json"
     ports:
       - "443:443"
       - "8080:8080"
     volumes:
-      - "./traefik:/traefik"
+      - "./traefik:/traefik_conf"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   whoami:
