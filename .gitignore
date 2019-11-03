@@ -7,7 +7,9 @@
 !.gitignore
 !*.md
 !packages
+
 !docker-compose.yml
+!traefik/dynamic-conf.toml
 
 # Ignore folders.
 .storage

@@ -1,0 +1,12 @@
+[http]
+  [http.routers]
+    [http.routers.router0]
+      entryPoints = ["websecure"]
+      service = "hassio"
+      rule = "Host(`home.brusman.se`) "
+
+  [http.services]
+    [http.services.hassio]
+      [http.services.hassio.loadBalancer]
+        [[http.services.hassio.loadBalancer.servers]]
+          url = "http://172.30.32.2:8123/"
