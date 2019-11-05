@@ -12,7 +12,6 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
-      #- "--certificatesresolvers.mytlschallenge.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.mytlschallenge.acme.email=jonas@brusman.se"
       - "--certificatesresolvers.mytlschallenge.acme.storage=/traefik_conf/letsencrypt/acme.json"
       - "--providers.file.filename=/traefik_conf/dynamic-conf.toml"
@@ -23,15 +22,6 @@ services:
     volumes:
       - "./traefik:/traefik_conf"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-
-  whoami:
-    image: "containous/whoami"
-    container_name: "simple-service"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`whoami.brusman.se`)"
-      - "traefik.http.routers.whoami.entrypoints=websecure"
-      - "traefik.http.routers.whoami.tls.certresolver=mytlschallenge"
 
   portainer:
     image: portainer/portainer
@@ -47,7 +37,6 @@ services:
       - "traefik.http.routers.portainer.rule=Host(`portainer.brusman.se`)"
       - "traefik.http.routers.portainer.entrypoints=websecure"
       - "traefik.http.routers.portainer.tls.certresolver=mytlschallenge"
-
 
 volumes:
   portainer_data:
