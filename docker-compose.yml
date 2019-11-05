@@ -1,7 +1,6 @@
 version: "3.3"
 
 services:
-
   traefik:
     image: "traefik:v2.0.0-rc3"
     container_name: "traefik"
@@ -22,6 +21,7 @@ services:
     volumes:
       - "./traefik:/traefik_conf"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    restart: always
 
   portainer:
     image: portainer/portainer
@@ -37,6 +37,7 @@ services:
       - "traefik.http.routers.portainer.rule=Host(`portainer.brusman.se`)"
       - "traefik.http.routers.portainer.entrypoints=websecure"
       - "traefik.http.routers.portainer.tls.certresolver=mytlschallenge"
+    restart: always
 
 volumes:
   portainer_data:
