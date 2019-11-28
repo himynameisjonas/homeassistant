@@ -7,8 +7,20 @@
       [http.routers.hassio.tls]
         certResolver = "mytlschallenge"
 
+    [http.routers.pihole]
+      entryPoints = ["websecure"]
+      service = "pihole"
+      rule = "Host(`pihole.brusman.se`)"
+      [http.routers.pihole.tls]
+        certResolver = "mytlschallenge"
+
   [http.services]
     [http.services.hassio]
       [http.services.hassio.loadBalancer]
         [[http.services.hassio.loadBalancer.servers]]
           url = "http://192.168.0.173:8123/"
+
+    [http.services.pihole]
+      [http.services.pihole.loadBalancer]
+        [[http.services.pihole.loadBalancer.servers]]
+          url = "http://192.168.0.173:8833/"
