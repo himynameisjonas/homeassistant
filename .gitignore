@@ -1,6 +1,8 @@
 # Example .gitignore file for your config dir.
 # A * ensures that everything will be ignored.
 *
+# whitelist directories
+!*/
 
 # You can whitelist files/folders with !, these will not be ignored.
 !*.yaml
@@ -10,6 +12,7 @@
 
 !docker-compose.yml
 !traefik/dynamic-conf.toml
+!node-red/settings.js
 
 # Ignore folders.
 .storage
