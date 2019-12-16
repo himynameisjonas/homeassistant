@@ -42,6 +42,8 @@
  * settings/option in the Hass.io panel in Home Assistant.
  */
 
+process.env.TZ = "Europe/Stockholm";
+
 module.exports = {
 
     // Retry time in milliseconds for MQTT connections
