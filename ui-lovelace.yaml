@@ -5,8 +5,6 @@ views:
     badges:
       - entity: binary_sensor.hk_presence_jonas
       - entity: binary_sensor.hk_presence_eva
-      - entity: binary_sensor.updater
-      - entity: sensor.travis_build_status
       - entity: sensor.lagenheten_temperature
       - entity: sensor.lagenheten_humidity
       - entity: sensor.yr_symbol
