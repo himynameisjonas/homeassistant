@@ -1,7 +1,7 @@
 title: Home
 views:
   - path: default_view
-    title: Home
+    title: Översikt
     badges:
       - entity: binary_sensor.hk_presence_jonas
       - entity: binary_sensor.hk_presence_eva
@@ -42,6 +42,17 @@ views:
           - entity: switch.byralampa_barn
         title: Arvids
         show_header_toggle: true
+      - type: media-control
+        entity: media_player.barnrum
+      - type: media-control
+        entity: media_player.kok_2
+      - type: media-control
+        entity: media_player.vardagsrum
+      - type: media-control
+        entity: media_player.sovrum
+  - path: sonos
+    title: Sonos
+    cards:
       - type: media-control
         entity: media_player.barnrum
       - type: media-control
