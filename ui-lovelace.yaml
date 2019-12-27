@@ -1,0 +1,52 @@
+title: Home
+views:
+  - path: default_view
+    title: Home
+    badges:
+      - entity: binary_sensor.hk_presence_jonas
+      - entity: binary_sensor.hk_presence_eva
+      - entity: binary_sensor.updater
+      - entity: sensor.travis_build_status
+      - entity: sensor.lagenheten_temperature
+      - entity: sensor.lagenheten_humidity
+      - entity: sensor.yr_symbol
+      - entity: sun.sun
+    cards:
+      - type: entities
+        entities:
+          - light.taklampa_2
+        title: Hallen
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - entity: light.koksbord
+          - entity: switch.vitrinskap
+          - entity: light.kok_fonster_hoger
+          - entity: light.kok_fonster_vanster
+        title: Kök
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - entity: light.color_temperature_light_1
+          - entity: light.taklampa_3
+          - entity: light.vardagsrum_farglampor
+          - entity: light.color_light_1
+          - entity: light.color_light_1_2
+          - entity: switch.golvlampa
+        title: Vardagsrum
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - entity: light.ny_barnrum
+          - entity: switch.fonster_barnrum
+          - entity: switch.byralampa_barn
+        title: Arvids
+        show_header_toggle: true
+      - type: media-control
+        entity: media_player.barnrum
+      - type: media-control
+        entity: media_player.kok_2
+      - type: media-control
+        entity: media_player.vardagsrum
+      - type: media-control
+        entity: media_player.sovrum
