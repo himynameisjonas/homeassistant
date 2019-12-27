@@ -35,6 +35,12 @@ views:
         show_header_toggle: true
       - type: entities
         entities:
+          - entity: switch.byralampan_sovrum
+          - entity: light.taklampa_sovrum
+        title: Sovrum
+        show_header_toggle: true
+      - type: entities
+        entities:
           - entity: light.ny_barnrum
           - entity: switch.fonster_barnrum
           - entity: switch.byralampa_barn
