@@ -40,14 +40,6 @@ views:
           - entity: switch.byralampa_barn
         title: Arvids
         show_header_toggle: true
-      - type: media-control
-        entity: media_player.barnrum
-      - type: media-control
-        entity: media_player.kok_2
-      - type: media-control
-        entity: media_player.vardagsrum
-      - type: media-control
-        entity: media_player.sovrum
   - path: sonos
     title: Sonos
     cards:
