@@ -14,6 +14,7 @@
 !traefik/dynamic-conf.toml
 !node-red/settings.js
 
+!www/**/*
 # Ignore folders.
 .storage
 .cloud
