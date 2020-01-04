@@ -54,7 +54,7 @@ views:
     cards:
       - type: custom:mini-media-player
         entity: media_player.kok_2
-        icon: mdi:speaker
+        icon: mdi:table-chair
         artwork: cover
         hide:
           volume: false
@@ -76,7 +76,7 @@ views:
 
       - type: custom:mini-media-player
         entity: media_player.barnrum
-        icon: mdi:speaker
+        icon: mdi:castle
         artwork: cover
         hide:
           volume: false
@@ -97,7 +97,7 @@ views:
 
       - type: custom:mini-media-player
         entity: media_player.vardagsrum
-        icon: mdi:speaker
+        icon: mdi:television-classic
         artwork: cover
         hide:
           volume: false
@@ -118,7 +118,7 @@ views:
 
       - type: custom:mini-media-player
         entity: media_player.sovrum
-        icon: mdi:speaker
+        icon: mdi:bed-double-outline
         artwork: cover
         hide:
           volume: false
