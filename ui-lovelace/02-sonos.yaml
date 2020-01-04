@@ -1,0 +1,87 @@
+title: Sonos
+path: sonos
+cards:
+  - type: custom:mini-media-player
+    entity: media_player.kok_2
+    icon: mdi:table-chair
+    artwork: cover
+    hide:
+      volume: false
+      source: true
+      power: true
+    speaker_group:
+      platform: sonos
+      show_group_count: true
+      entities:
+        - entity_id: media_player.kok_2
+          name: Kok
+        - entity_id: media_player.vardagsrum
+          name: Vardagsrum
+        - entity_id: media_player.sovrum
+          name: Sovrum
+        - entity_id: media_player.barnrum
+          name: Arvids
+
+
+  - type: custom:mini-media-player
+    entity: media_player.barnrum
+    icon: mdi:castle
+    artwork: cover
+    hide:
+      volume: false
+      source: true
+      power: true
+    speaker_group:
+      platform: sonos
+      show_group_count: true
+      entities:
+        - entity_id: media_player.kok_2
+          name: Kok
+        - entity_id: media_player.vardagsrum
+          name: Vardagsrum
+        - entity_id: media_player.sovrum
+          name: Sovrum
+        - entity_id: media_player.barnrum
+          name: Arvids
+
+  - type: custom:mini-media-player
+    entity: media_player.vardagsrum
+    icon: mdi:television-classic
+    artwork: cover
+    hide:
+      volume: false
+      source: true
+      power: true
+    speaker_group:
+      platform: sonos
+      show_group_count: true
+      entities:
+        - entity_id: media_player.kok_2
+          name: Kok
+        - entity_id: media_player.vardagsrum
+          name: Vardagsrum
+        - entity_id: media_player.sovrum
+          name: Sovrum
+        - entity_id: media_player.barnrum
+          name: Arvids
+
+  - type: custom:mini-media-player
+    entity: media_player.sovrum
+    icon: mdi:bed-double-outline
+    artwork: cover
+    hide:
+      volume: false
+      source: true
+      power: true
+    speaker_group:
+      platform: sonos
+      show_group_count: true
+      entities:
+        - entity_id: media_player.kok_2
+          name: Kok
+        - entity_id: media_player.vardagsrum
+          name: Vardagsrum
+        - entity_id: media_player.sovrum
+          name: Sovrum
+        - entity_id: media_player.barnrum
+          name: Arvids
