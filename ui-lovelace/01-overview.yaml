@@ -8,6 +8,28 @@ badges:
   - entity: sensor.yr_symbol
   - entity: sun.sun
 cards:
+  - type: horizontal-stack
+    cards:
+      - type: entity-button
+        name: God morgon
+        icon: mdi:coffee
+        tap_action:
+          action: call-service
+          service: script.node_red
+          service_data:
+            flow: "good morning"
+        entity: script.node_red
+
+      - type: entity-button
+        name: God natt
+        icon: mdi:weather-night
+        tap_action:
+          action: call-service
+          service: script.node_red
+          service_data:
+            flow: "good night"
+        entity: script.node_red
+
   - type: entities
     entities:
       - light.taklampa_2

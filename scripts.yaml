@@ -1,3 +1,6 @@
+node_red:
+  sequence:
+
 leaving:
   sequence:
   - service: light.turn_off
