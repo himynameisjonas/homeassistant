@@ -31,49 +31,56 @@ cards:
         entity: script.node_red
 
   - type: entities
-    entities:
-      - entity: light.taklampa_2
-        icon: mdi:lamp
     title: Hallen
+    entities:
+      - entity: light.hallampa
+        icon: mdi:lamp
     show_header_toggle: true
   - type: entities
+    title: Kök
     entities:
       - entity: light.koksbord
         icon: mdi:ceiling-light
       - entity: switch.vitrinskap
         icon: mdi:cupboard
-      - entity: light.kok_fonster_hoger
+      - entity: light.kok_hoger
         icon: mdi:lamp
-      - entity: light.kok_fonster_vanster
+      - entity: light.kok_vanster
         icon: mdi:lamp
-    title: Kök
     show_header_toggle: true
   - type: entities
+    title: Vardagsrum
     entities:
-      - entity: light.color_temperature_light_1
+      - entity: light.vardagsrum_taklampa
         icon: mdi:ceiling-light
-      - entity: light.taklampa_3
+      - entity: light.soffbord
         icon: mdi:ceiling-light
-      - entity: light.vardagsrum_farglampor
+      - entity: light.vardagsrum_golv
+        icon: mdi:lamp
+      - entity: light.vardagsrum_fonster
         icon: mdi:lamp
       - entity: switch.golvlampa
         icon: mdi:vanity-light
-    title: Vardagsrum
     show_header_toggle: true
   - type: entities
+    title: Sovrum
     entities:
       - entity: switch.byralampan_sovrum
         icon: mdi:lamp
       - entity: light.taklampa_sovrum
         icon: mdi:ceiling-light
-    title: Sovrum
     show_header_toggle: true
   - type: entities
+    title: Arvids
     entities:
-      - entity: light.ny_barnrum
+      - entity: light.taklampa_arvids
         icon: mdi:ceiling-light
-      # - entity: switch.fonster_barnrum
       - entity: switch.byralampa_barn
         icon: mdi:globe-model
-    title: Arvids
+    show_header_toggle: true
+  - type: entities
+    title: Tors
+    entities:
+      - entity: light.taklampa_tors
+        icon: mdi:ceiling-light
     show_header_toggle: true
