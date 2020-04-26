@@ -43,9 +43,7 @@ cards:
         icon: mdi:ceiling-light
       - entity: switch.vitrinskap
         icon: mdi:cupboard
-      - entity: light.kok_hoger
-        icon: mdi:lamp
-      - entity: light.kok_vanster
+      - entity: light.koksfonster_2
         icon: mdi:lamp
     show_header_toggle: true
   - type: entities
@@ -55,9 +53,7 @@ cards:
         icon: mdi:ceiling-light
       - entity: light.soffbord
         icon: mdi:ceiling-light
-      - entity: light.vardagsrum_golv
-        icon: mdi:lamp
-      - entity: light.vardagsrum_fonster
+      - entity: light.vardagsrum_farglampor_2
         icon: mdi:lamp
       - entity: switch.golvlampa
         icon: mdi:vanity-light
