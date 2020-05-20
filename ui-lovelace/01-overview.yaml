@@ -71,6 +71,8 @@ cards:
     entities:
       - entity: light.taklampa_arvids
         icon: mdi:ceiling-light
+      - entity: light.taklampa_arvid
+        icon: mdi:ceiling-light
       - entity: switch.byralampa_barn
         icon: mdi:globe-model
     show_header_toggle: true
