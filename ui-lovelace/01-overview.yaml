@@ -69,9 +69,7 @@ cards:
   - type: entities
     title: Arvids
     entities:
-      - entity: light.taklampa_arvids
-        icon: mdi:ceiling-light
-      - entity: light.taklampa_arvid
+      - entity: light.taklampa_arvid_2
         icon: mdi:ceiling-light
       - entity: switch.byralampa_barn
         icon: mdi:globe-model
