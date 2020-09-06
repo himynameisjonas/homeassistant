@@ -3,34 +3,34 @@ node_red:
 
 leaving:
   sequence:
-  - service: light.turn_off
-    entity_id: group.all_lights
-  - service: media_player.media_pause
-    entity_id:
-      - media_player.barnrum
-      - media_player.vardagsrum
-      - media_player.kok
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: media_player.media_pause
+      entity_id:
+        - media_player.barnrum
+        - media_player.vardagsrum
+        - media_player.kok
   alias: Lämna hemmet
 
 lullabies:
   sequence:
-  - data:
-      entity_id: media_player.barnrum
-    service: media_player.sonos_unjoin
-  - data:
-      entity_id: media_player.barnrum
-      volume_level: '.10'
-    service: media_player.volume_set
-  - data:
-      entity_id: media_player.barnrum
-      sleep_time: 7200
-    service: media_player.sonos_set_sleep_timer
-  - data:
-      entity_id: media_player.barnrum
-      shuffle: 'true'
-    service: media_player.shuffle_set
-  - data:
-      entity_id: media_player.barnrum
-      source: Arvids vaggvisor
-    service: media_player.select_source
+    - data:
+        entity_id: media_player.barnrum
+      service: media_player.sonos_unjoin
+    - data:
+        entity_id: media_player.barnrum
+        volume_level: ".10"
+      service: media_player.volume_set
+    - data:
+        entity_id: media_player.barnrum
+        sleep_time: 7200
+      service: media_player.sonos_set_sleep_timer
+    - data:
+        entity_id: media_player.barnrum
+        shuffle: "true"
+      service: media_player.shuffle_set
+    - data:
+        entity_id: media_player.barnrum
+        source: Arvids vaggvisor
+      service: media_player.select_source
   alias: Arvids vaggvisor

@@ -1,0 +1,39 @@
+- id: '1587799926141'
+  alias: Test knapp
+  description: ''
+  trigger:
+  - device_id: 0d3b5e5072bd4ea89c190311568403a4
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - entity_id: media_player.sovrum
+    service: media_player.media_play_pause
+- id: '1587800067260'
+  alias: test play
+  description: ''
+  trigger:
+  - device_id: 0d3b5e5072bd4ea89c190311568403a4
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - entity_id: media_player.sovrum
+    service: media_player.media_play
+- id: '1587800137879'
+  alias: Ny automation
+  description: ''
+  trigger:
+  - device_id: 0d3b5e5072bd4ea89c190311568403a4
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - entity_id: media_player.sovrum
+    service: media_player.media_play
