@@ -89,7 +89,8 @@ ios:
 
 google_assistant:
   project_id: !secret google_assistant_project_id
-  api_key: !secret google_assistant_api_key
+  service_account: !include SERVICE_ACCOUNT.JSON
+  report_state: true
   exposed_domains:
     - light
 
