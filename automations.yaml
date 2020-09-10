@@ -41,3 +41,45 @@
       title: Frysen
     service: notify.all_iphones
   mode: single
+- id: '1599771975814'
+  alias: Dimmra upp vid pause
+  description: ''
+  trigger:
+  - entity_id: media_player.vardagsrum_2
+    from: playing
+    platform: state
+    to: paused
+  condition:
+  - condition: device
+    device_id: ae3dfb97493a48f2a1207a810cca8636
+    domain: light
+    entity_id: light.soffbord
+    type: is_on
+  action:
+  - brightness_pct: 50
+    device_id: ae3dfb97493a48f2a1207a810cca8636
+    domain: light
+    entity_id: light.soffbord
+    type: turn_on
+  mode: single
+- id: '1599772149573'
+  alias: Dimmra ner vid playing
+  description: ''
+  trigger:
+  - entity_id: media_player.vardagsrum_2
+    from: paused
+    platform: state
+    to: playing
+  condition:
+  - condition: device
+    device_id: ae3dfb97493a48f2a1207a810cca8636
+    domain: light
+    entity_id: light.soffbord
+    type: is_on
+  action:
+  - brightness_pct: 10
+    device_id: ae3dfb97493a48f2a1207a810cca8636
+    domain: light
+    entity_id: light.soffbord
+    type: turn_on
+  mode: single
