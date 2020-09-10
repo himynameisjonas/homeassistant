@@ -96,6 +96,9 @@ google_assistant:
 
 homekit:
 
+webostv:
+  host: 192.168.0.207
+
 input_boolean:
   jonas_present:
     name: Jonas
