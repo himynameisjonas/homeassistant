@@ -98,6 +98,7 @@ homekit:
 
 webostv:
   host: 192.168.0.207
+  name: tv vardagsrum
 
 input_boolean:
   jonas_present:
