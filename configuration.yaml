@@ -104,6 +104,14 @@ input_boolean:
     name: Eva
     icon: mdi:account
 
+notify:
+  - platform: group
+    name: all_iphones
+    services:
+    - service: mobile_app_jonas_iphone
+    - service: mobile_app_han_solo
+
+
 binary_sensor: !include binary_sensor.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
