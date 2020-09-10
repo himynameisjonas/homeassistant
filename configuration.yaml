@@ -95,6 +95,10 @@ google_assistant:
     - light
 
 homekit:
+  include_entities:
+    - input_boolean.eva_present
+    - input_boolean.jonas_present
+    - input_boolean.apple_tv_playing
 
 webostv:
   host: 192.168.0.207
