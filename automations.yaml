@@ -1,5 +1,5 @@
 - id: '1599757764933'
-  alias: Notify me if the temperature is above 6
+  alias: Kylskåpstemperatur
   description: ''
   trigger:
   - above: 6
@@ -17,6 +17,27 @@
   - data:
       message: Kolla dörren, det börjar bli varmt här inne.
       title: Kylskåpet
-    service: notify.mobile_app_jonas_iphone
+    service: notify.all_iphones
   mode: queued
   max: 2
+- id: '1599763927597'
+  alias: Frystemperatur
+  description: ''
+  trigger:
+  - above: 18
+    device_id: 3fb2c3258cab4d209d46c5075a5d5eac
+    domain: sensor
+    entity_id: sensor.temperature_4
+    for:
+      hours: 0
+      minutes: 3
+      seconds: 0
+    platform: device
+    type: temperature
+  condition: []
+  action:
+  - data:
+      message: Kolla dörren, det börjar bli varmt här inne.
+      title: Frysen
+    service: notify.all_iphones
+  mode: single
