@@ -1,39 +1,22 @@
-- id: '1587799926141'
-  alias: Test knapp
+- id: '1599757764933'
+  alias: Notify me if the temperature is above 6
   description: ''
   trigger:
-  - device_id: 0d3b5e5072bd4ea89c190311568403a4
-    domain: deconz
+  - above: 6
+    device_id: f67b0fe0ab7d4a23b5dd24106218206b
+    domain: sensor
+    entity_id: sensor.temperature_7
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
     platform: device
-    subtype: turn_on
-    type: remote_button_short_press
+    type: temperature
   condition: []
   action:
-  - entity_id: media_player.sovrum
-    service: media_player.media_play_pause
-- id: '1587800067260'
-  alias: test play
-  description: ''
-  trigger:
-  - device_id: 0d3b5e5072bd4ea89c190311568403a4
-    domain: deconz
-    platform: device
-    subtype: turn_on
-    type: remote_button_short_press
-  condition: []
-  action:
-  - entity_id: media_player.sovrum
-    service: media_player.media_play
-- id: '1587800137879'
-  alias: Ny automation
-  description: ''
-  trigger:
-  - device_id: 0d3b5e5072bd4ea89c190311568403a4
-    domain: deconz
-    platform: device
-    subtype: turn_on
-    type: remote_button_short_press
-  condition: []
-  action:
-  - entity_id: media_player.sovrum
-    service: media_player.media_play
+  - data:
+      message: Kolla dörren, det börjar bli varmt här inne.
+      title: Kylskåpet
+    service: notify.mobile_app_jonas_iphone
+  mode: queued
+  max: 2
