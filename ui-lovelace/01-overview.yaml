@@ -1,10 +1,8 @@
 title: Översikt
 path: default_view
 badges:
-  - entity: binary_sensor.hk_presence_jonas
-  - entity: binary_sensor.hk_presence_eva
-  - entity: sensor.lagenheten_temperature
-  - entity: sensor.lagenheten_humidity
+  - entity: person.jonas
+  - entity: person.eva
   - entity: sensor.yr_symbol
   - entity: sun.sun
 cards:
