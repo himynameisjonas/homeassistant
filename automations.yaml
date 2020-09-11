@@ -83,3 +83,20 @@
     entity_id: light.soffbord
     type: turn_on
   mode: single
+- id: '1599844813109'
+  alias: Homekit to device tracker
+  description: ''
+  trigger:
+  - entity_id: input_boolean.eva_present
+    platform: state
+  - entity_id: input_boolean.jonas_present
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      dev_id: homekit_{{ trigger.to_state.name }}
+      location_name: '{{ ''home'' if trigger.to_state.state == ''on'' else ''not_home''
+        }}'
+    service: device_tracker.see
+  mode: parallel
+  max: 10
