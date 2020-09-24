@@ -75,6 +75,6 @@ cards:
   - type: entities
     title: Tors
     entities:
-      - entity: light.taklampa_tors
+      - entity: light.color_light_14
         icon: mdi:ceiling-light
     show_header_toggle: true
