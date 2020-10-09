@@ -115,10 +115,10 @@ homekit:
       - light.taklampa_sovrum
 
       # Arvids
+      - light.taklampa_arvid_2
 
       # Tors
       - light.color_light_14
-
 
 webostv:
   host: 192.168.0.207
