@@ -49,6 +49,10 @@
     from: playing
     platform: state
     to: paused
+  - entity_id: media_player.vardagsrum_2
+    from: playing
+    platform: state
+    to: 'off'
   condition:
   - condition: device
     device_id: ae3dfb97493a48f2a1207a810cca8636
