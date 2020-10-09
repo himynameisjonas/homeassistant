@@ -97,8 +97,28 @@ google_assistant:
 homekit:
   filter:
     include_entities:
+      # presence
       - input_boolean.eva_present
       - input_boolean.jonas_present
+
+      # vardagsrum
+      - light.vardagsrum_taklampa
+      - light.soffbord
+      - light.vardagsrum_farglampor_2
+
+      # kök
+      - light.koksbord
+      - switch.vitrinskap
+      - light.koksfonster_2
+
+      # Sovrum
+      - light.taklampa_sovrum
+
+      # Arvids
+
+      # Tors
+      - light.color_light_14
+
 
 webostv:
   host: 192.168.0.207
