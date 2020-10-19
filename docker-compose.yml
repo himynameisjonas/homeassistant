@@ -17,7 +17,7 @@ services:
       - "--providers.file.watch=true"
     ports:
       - "443:443"
-      - "8080:8080"
+      - "8181:8080"
     volumes:
       - "./traefik:/traefik_conf"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
