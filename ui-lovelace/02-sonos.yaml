@@ -1,3 +1,7 @@
+resources:
+  - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+    type: module
+
 title: Sonos
 path: sonos
 cards:

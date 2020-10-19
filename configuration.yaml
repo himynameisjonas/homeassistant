@@ -73,8 +73,6 @@ system_health:
 
 # Sensors
 sensor:
-  # Weather prediction
-  - platform: yr
 
 # Text to speech
 tts:
