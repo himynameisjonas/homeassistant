@@ -17,7 +17,7 @@ services:
       - "--providers.file.watch=true"
     ports:
       - "443:443"
-      - "8080:8080"
+      - "8181:8080"
     volumes:
       - "./traefik:/traefik_conf"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
@@ -38,6 +38,20 @@ services:
       - "traefik.http.routers.portainer.entrypoints=websecure"
       - "traefik.http.routers.portainer.tls.certresolver=mytlschallenge"
     restart: always
+
+  unifi:
+    image: jacobalberty/unifi:arm32v7
+    restart: unless-stopped
+    ports:
+      - 8080/tcp # - Device command/control
+      - 8443/tcp # - Web interface + API
+      - 8843/tcp # - HTTPS portal
+      - 3478/udp # - STUN service
+      - 6789/tcp # - Speed Test (unifi5 only)
+    environment:
+      - TZ=Europe/Stockholm
+    volumes:
+      - /home/pi/unifi:/unifi
 
 volumes:
   portainer_data:
