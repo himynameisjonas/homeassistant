@@ -18,9 +18,9 @@
     [http.services.hassio]
       [http.services.hassio.loadBalancer]
         [[http.services.hassio.loadBalancer.servers]]
-          url = "http://192.168.0.173:8123/"
+          url = "http://192.168.1.50:8123/"
 
     [http.services.pihole]
       [http.services.pihole.loadBalancer]
         [[http.services.pihole.loadBalancer.servers]]
-          url = "http://192.168.0.173:8833/"
+          url = "http://192.168.1.50:8833/"
