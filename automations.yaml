@@ -55,16 +55,16 @@
     to: 'off'
   condition:
   - condition: device
-    device_id: ae3dfb97493a48f2a1207a810cca8636
-    domain: light
-    entity_id: light.soffbord
     type: is_on
-  action:
-  - brightness_pct: 50
-    device_id: ae3dfb97493a48f2a1207a810cca8636
+    device_id: 5c5b62ac4dd311eb9efd5bdf3ce322c8
+    entity_id: light.extended_color_light_16
     domain: light
-    entity_id: light.soffbord
-    type: turn_on
+  action:
+  - type: turn_on
+    device_id: 5c5b62ac4dd311eb9efd5bdf3ce322c8
+    entity_id: light.extended_color_light_16
+    domain: light
+    brightness_pct: 100
   mode: single
 - id: '1599772149573'
   alias: Dimmra ner vid playing
@@ -76,16 +76,16 @@
     to: playing
   condition:
   - condition: device
-    device_id: ae3dfb97493a48f2a1207a810cca8636
-    domain: light
-    entity_id: light.soffbord
     type: is_on
-  action:
-  - brightness_pct: 10
     device_id: ae3dfb97493a48f2a1207a810cca8636
+    entity_id: light.golvlampa
     domain: light
-    entity_id: light.soffbord
-    type: turn_on
+  action:
+  - type: turn_on
+    device_id: 5c5b62ac4dd311eb9efd5bdf3ce322c8
+    entity_id: light.extended_color_light_16
+    domain: light
+    brightness_pct: 20
   mode: single
 - id: '1599844813109'
   alias: Homekit to device tracker
